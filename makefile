@@ -13,7 +13,7 @@ run_all: $(addprefix run_programa, $(seq_1_25)) $(addprefix run_programa, $(seq_
 
 # Regla para ejecutar los programas
 run_programa%:
-	swipl -s ../Prolog/Programa1.pl -g main -t halt -c $*
+	swipl -s ../Prolog/Programa$(subst run_programa,,$@).pl -g main -t halt
 
 .PHONY: all run_all run_programa% clean
 
