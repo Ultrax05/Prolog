@@ -27,7 +27,9 @@
 extraer_aleatorios_rango(N, K, L, Resultado) :-
     K =< L,  % Asegura que K sea menor o igual que L.
     findall(X, between(K, L, X), Lista),  % Genera una lista de números entre K y L.
-    random_select(Resultado, N, Lista).
+    length(Resultado,N),
+    random_permutation(Lista, Mezclada),
+    append(Resultado,_,Mezclada).
 %-------------------------------------
 % Ejemplo de uso:
 %?- extraer_aleatorios_rango(3, 1, 10, R).
