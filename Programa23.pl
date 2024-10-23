@@ -23,9 +23,10 @@
 
 extraer_aleatorios(N, Lista, Resultado) :-
     length(Lista, Length),      % Obtiene la longitud de la lista original.
-    findall(Index, between(1, Length, Index), Indices),  % Genera una lista de indices.
-    random_select(Indices, N, RandomIndices),  % Selecciona N indices aleatorios.
-    findall(Element, (member(Index, RandomIndices), nth1(Index, Lista, Element)), Resultado).
+    N =< Length,
+    random_permutation(Lista, Permutados),
+    length(Resultado,N),
+    append(Resultado,_,Permutados).
 %-------------------------------------
 % Ejemplo de uso:
 %?- extraer_aleatorios(3, [a, b, c, d, e, f], R).
