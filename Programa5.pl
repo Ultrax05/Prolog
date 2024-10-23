@@ -5,6 +5,9 @@
 %              los elementos de una lista.
 %              Se incluye una versión en python.
 % ===============================================
+main :-
+    revertir([a, b, c], R),
+    write('El resultado es: '), write(R), nl.
 % -------- Código en python ------------
 %# Solo retorna la lista al reveces, con una función de python
 %def tam(lista):
