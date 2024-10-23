@@ -14,6 +14,9 @@
 %a = porcion_lista(lista, 3, 6)
 %print(a)
 % -------- Código en Prolog --------------------
+main :-
+    extraer_porcion(2, 5, [a, b, c, d, e, f, g], R),
+    write('[a, b, c, d, e, f, g]:'), write(R), nl.
 extraer_porcion(N, K, Lista, SubLista) :-
     extraer_desde(N, Lista, ListaDesdeN),  % Extraer la lista a partir del n-ésimo elemento.
     extraer_hasta(K-N+1, ListaDesdeN, SubLista).  % Extraer los elementos de n hasta k+1 elementos de la nueva lista.
