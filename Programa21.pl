@@ -18,7 +18,7 @@
 %print(insertar_n_posicion(lista, 9, 4))
 % -------- Código en Prolog --------------------
 main :-
-    insertar_posicion(2, x, [a, b, c, d], R),
+    insert_posicion(2, x, [a, b, c, d], R),
     write('[a, b, c, d]:'), write(R), nl.
 % Similar al anterior programa, cuando es la primera posicion en la que ingresara el elemento.
 insert_posicion(1, Elemento, Lista, [Elemento | Lista]).  % Insertar al inicio.
