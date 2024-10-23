@@ -13,6 +13,9 @@
 %# Ejemplo de uso
 %print(lista_rango(5, 10))
 % -------- Código en Prolog --------------------
+main :-
+    generar_rango(3, 7, R),
+    write('3-7 :'), write(R), nl.
 generar_rango(N, K, Lista) :-
     findall(X, between(N, K, X), Lista).           % Crea la lista con esos números.
 %-------------------------------------
