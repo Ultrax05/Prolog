@@ -14,6 +14,9 @@
 %lista = [1, 2, 3, 4]
 %print(tam(lista))  # Esto imprimirá 4
 % -------- Código en Prolog --------------------
+main :-
+    longitud([1, 2, 3], N),
+    write('El resultado es: '), write(N), nl.
 % Cuando la lista está vacía, el número de elementos es 0.
 longitud([], 0).
 
