@@ -20,7 +20,7 @@
 %print(elemento(lista,1))  # Esto imprimirá 1
 % -------- Código en Prolog --------------------
 main :-
-    n_esimo(2,[1,2,3,4], X).
+    n_esimo(2,[1,2,3,4], X),
     write('El resultado es: '), write(X), nl.
 % Si el índice es 1, el primer elemento es el n-ésimo, ya que la siguiente función reduce el indice y la lista hasta llegar al elemento deseado.
 n_esimo(1, [X|_], X).
