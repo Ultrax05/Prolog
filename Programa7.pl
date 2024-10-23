@@ -19,6 +19,9 @@
 %print("Lista original: ",lista)
 %print("Lista aplanada: ",aplanar(lista))
 % -------- Código en Prolog --------------------
+main :-
+    aplanar([1, [2, 3], [4, [5, 6]], 7], X),
+    write('[1, [2, 3], [4, [5, 6]], 7]: '), write(X), nl.
 % Una lista vacía no necesita aplanarse, ya que es igual a una lista vacia.
 aplanar([], []).
 
