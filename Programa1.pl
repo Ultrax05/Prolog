@@ -19,8 +19,8 @@
 %print(ultimo(lista))  # Esto imprimirá 4
 % -------- Código en Prolog --------------------
 main :-
-    sumar(3, 5, Resultado),
-    write('El resultado es: '), write(Resultado), nl.
+    ultimo([1, 2, 3, 4], X),
+    write('El resultado es: '), write(X), nl.
 % Predicado my_last(X, List) que determina el último
 % elemento X de la lista List.
 
