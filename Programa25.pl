@@ -16,6 +16,9 @@
 %lista = [1, 2, 3, 4, 5]
 %print("Permutación aleatoria de la lista ",lista," : ",revolver(lista))
 % -------- Código en Prolog --------------------
+main :-
+    permutacion_aleatoria([a, b, c], R),
+    write('[a, b, c]:'), write(R), nl.
 permutacion_aleatoria(Lista, Permutacion) :-
     revolver(Lista, Permutacion).
 
