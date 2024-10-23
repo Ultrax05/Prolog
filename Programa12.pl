@@ -34,6 +34,9 @@
 %print(run_length_mod(lista))
 %
 % -------- Código en Prolog --------------------
+main :-
+    decodificar([(a, 2), (b, 1), (c, 3)], R),
+    write('[(a, 2), (b, 1), (c, 3)]'), write(R), nl.
 % En caso de que la lista esté vacia.
 decodificar([], []).
 
