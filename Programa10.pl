@@ -23,8 +23,8 @@
 %print(agrupar_duplicados(lista))  
 % -------- Código en Prolog --------------------
 main :-
-    run_length([a, a, b, b, c, c, c, c, a, a, a], X),
-    write('[a, a, b, b, c, c, c, c, a, a, a]: '), write(X), nl.
+    run_length([a, a, b, b, c, c, c, c, a, a, a], T),
+    write("[a, a, b, b, c, c, c, c, a, a, a]: "), write(T), nl.
 % Una lista vacía no necesita comprimirse.
 run_length([], []).
 
