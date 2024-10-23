@@ -18,7 +18,9 @@
 %lista = [1, 2, 3, 4]
 %print(penultimo(lista))  # Esto imprimirá 2
 % -------- Código en Prolog --------------------
-
+main :-
+    penultimo([1, 2, 3, 4], X),
+    write('El resultado es: '), write(X), nl.
 % Cuando la lista tiene dos elementos, el primero es el penúltimo.
 penultimo([X, _], X).
 
