@@ -22,9 +22,10 @@
 %lista = [1 , 1 , 2 , 2 , 3 , 3 , 3 , 4 , 4 , 1 , 1]
 %print(agrupar_duplicados(lista))  
 % -------- Código en Prolog --------------------
-main :-
+main :- 
     run_length([a, a, b, b, c, c, c, c, a, a, a], T),
     write("[a, a, b, b, c, c, c, c, a, a, a]: "), write(T), nl.
+
 % Una lista vacía no necesita comprimirse.
 run_length([], []).
 
@@ -33,15 +34,16 @@ run_length([X | Cola], [[X, N] | Resultado]) :-
     contar_repetidos(X, Cola, N, Resto),
     run_length(Resto, Resultado).
 
-% Funcion para contar elementos consecutivos repetidos, sino es igual se para el contador. 
-contar_repetidos(X, [X | Cola], N, Resto) :-
+% Función para contar elementos consecutivos repetidos
+contar_repetidos(X, [X | Cola], N, Resto) :- 
     contar_repetidos(X, Cola, N1, Resto),
     N is N1 + 1.
-contar_repetidos(X, [Y | Cola], 1, [Y | Cola]) :-
+contar_repetidos(X, [Y | Cola], 1, [Y | Cola]) :- 
     X \= Y.
 contar_repetidos(X, [], 1, []).
 
-
+% Para evitar advertencias, también se puede agregar una cláusula auxiliar
+contar_repetidos(_, [], 0, []) :- !.
 %-------------------------------------
 % Ejemplo de uso:
 %?- run_length([a, a, b, b, c, c, c, c, a, a, a], Resultado).
