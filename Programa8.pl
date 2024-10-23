@@ -20,6 +20,17 @@
 %print("Lista original: ",lista)
 %print("Lista sin duplicados consecutivos: ",eliminarduplicados(lista))
 % -------- Código en Prolog --------------------
+main :-
+    eliminar_duplicados_consecutivos([1, 1, 2, 2, 3, 3, 3, 4, 4, 5], R),
+    write('El resultado es: '), write(R), nl.
+% Si el índice es 1, el primer elemento es el n-ésimo, ya que la siguiente función reduce el indice y la lista hasta llegar al elemento deseado.
+n_esimo(1, [X|_], X).
+
+% Reducir el índice y recorre la lista, en vez de acceder directamente al elemento, como en otros lenguales, sino que reduce la lista, toma el elemento que desea acceder y hasta que sea 1, repite recursivamente la función disminuyendo el tamaño de la lista y el indice.
+n_esimo(N, [_|Resto], X) :-
+    N > 1,               % Asegurarse de que N sea mayor que 1.
+    N1 is N - 1,         % Reduce el índice.
+    n_esimo(N1, Resto, X). % Llamada recursiva con la lista reducida.
 % Una lista vacía es una lista sin duplicados, ya que no contiene elementos.
 eliminar_duplicados_consecutivos([], []).
 
