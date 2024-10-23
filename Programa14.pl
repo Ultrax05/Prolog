@@ -17,6 +17,9 @@
 %print(duplicados)  # Output: [2, 4, 6, 8]
 %
 % -------- Código en Prolog --------------------
+main :-
+    duplicar([1, 2, 3], R),
+    write('[1, 2, 3]'), write(R), nl.
 % Caso en que la lista es vacia.
 duplicar([], []).  
 
