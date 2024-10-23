@@ -18,6 +18,9 @@
 %lista = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 %print(elimina_elemento(lista, 4))
 % -------- Código en Prolog --------------------
+main :-
+    eliminar_n_elemento(3, [a, b, c, d, e], R),
+    write('[a, b, c, d, e]'), write(R), nl.
 % En caso de querer eliminar el primer elemento, accede directamente.
 eliminar_n_elemento(1, [_ | Cola], Cola).
 eliminar_n_elemento(N, [Cabeza | Cola], [Cabeza | Resto]) :-
