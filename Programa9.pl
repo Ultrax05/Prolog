@@ -22,6 +22,9 @@
 %lista = [1 , 1 , 2 , 2 , 3 , 3 , 3 , 4 , 4 , 1 , 1]
 %print(agrupar_duplicados(lista))  
 % -------- Código en Prolog --------------------
+main :-
+    agrupar_duplicados([1, 1, 2, 3, 3, 3, 4], X),
+    write('[1, 1, 2, 3, 3, 3, 4]: '), write(X), nl.
 % Caso base: una lista vacía da una lista vacía
 agrupar_duplicados([], []).
 
