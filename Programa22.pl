@@ -14,11 +14,7 @@
 %print(lista_rango(5, 10))
 % -------- Código en Prolog --------------------
 generar_rango(N, K, Lista) :-
-    N =< K,               % Asegura que N sea menor o igual que K.
-    findall(N, (
-        between(N, K, N)  % Genera todos los números enteros entre N y K.
-    ), Lista).           % Crea la lista con esos números.
-
+    findall(X, between(N, K, X), Lista).           % Crea la lista con esos números.
 %-------------------------------------
 % Ejemplo de uso:
 %?- generar_rango(3, 7, R).
