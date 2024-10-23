@@ -1,4 +1,3 @@
-.PHONY: all run_all clean
 
 all: run_all
 
@@ -12,7 +11,7 @@ run_programa%:
 	swipl -s ../Prolog/Programa1.pl -g main -t halt -c $*
 
 # ... Repite para los demás programas hasta run_programa10
-
+.PHONY: run_all run_programa%
 clean:
 	@echo "Limpiando archivos generados..."
 	# Añade comandos de limpieza si es necesario
