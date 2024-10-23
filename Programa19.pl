@@ -19,7 +19,9 @@
 %lista = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 %print(mov_izquierda(lista, 2, 2))
 % -------- Código en Prolog --------------------
-
+main :-
+    mover_izquierda(3, 2, [a, b, c, d, e, f], R),
+    write('[a, b, c, d, e, f]:'), write(R), nl.
 mover_izquierda(N, K, Lista, ListaResultado) :-
     extraer_porcion(1, N, Lista, PrimerosN),  % Extraer los primeros N elementos.
     eliminar_primeros_n(N, Lista, Resto),     % Eliminar los primeros N elementos de la lista.
