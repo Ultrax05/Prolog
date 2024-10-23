@@ -15,6 +15,9 @@
 %lista = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 %print(elimina_n_elemento(lista, 3))
 % -------- Código en Prolog --------------------
+main :-
+    eliminar_n_esimo(2, [a, b, c, d, e, f, g], R),
+    write('[a, b, c, d, e, f, g]'), write(R), nl.
 % Caso donde esta vacia la lista, regresa una lista vacia
 eliminar_n_esimo(_, [], []).  
 
