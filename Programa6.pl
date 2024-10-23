@@ -20,7 +20,10 @@
 %print(tam(lista)) 
 % -------- Código en Prolog --------------------
 main :-
-    write('[1, 2, 3, 4]: '), es_palindromo([1, 2, 3, 4]), nl.
+    Lista = [1, 2, 3, 4],
+    write('Lista: '), write(Lista), nl,
+    (es_palindromo(Lista) -> write('Es un palíndromo'); write('No es un palíndromo')), nl.
+
 es_palindromo(Lista) :-
     reverse(Lista, Lista).  % La lista es un palíndromo si es igual a su reverso, usando la función reverse, se le da la misma lista y arroja si es igual o no al reverso.
 %-------------------------------------
