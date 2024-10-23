@@ -24,6 +24,10 @@
 % Importa la biblioteca de numeros aleatorios.
 :- use_module(library(random)).
 
+main :-
+    extraer_aleatorios_rango(3, 1, 10, R),
+    write('3 del 1 al 10 :'), write(R), nl.
+
 extraer_aleatorios_rango(N, K, L, Resultado) :-
     K =< L,  % Asegura que K sea menor o igual que L.
     findall(X, between(K, L, X), Lista),  % Genera una lista de números entre K y L.
