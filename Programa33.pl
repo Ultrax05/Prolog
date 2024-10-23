@@ -25,16 +25,19 @@
 %print("El valor de la función totiente de Euler φ(",numero,") es: ",phi(numero))
 % -------- Código en Prolog --------------------
 phi(M, Phi) :-
+    M > 0,
     findall(X, (between(1, M, X), coprimos(M, X)), ListaCoprimos),
     length(ListaCoprimos, Phi).
 
 % Determina si dos numeros son coprimos.
 coprimos(A, B) :-
+    B > 0,
     gcd(A, B, 1). % Si el máximo comun divisor es 1, entonces son coprimos.
 
 % Calcula el maximo comun divisor de A y B.
 gcd(A, 0, A) :- !.  % Si B es 0, el gcd es A.
 gcd(A, B, GCD) :-
+    B > 0,
     R is A mod B,
     gcd(B, R, GCD).
 
