@@ -21,6 +21,10 @@
 % -------- Código en Prolog --------------------
 :- use_module(library(random)).  % Importa biblioteca de numeros aleatorios.
 
+main :-
+    extraer_aleatorios(3, [a, b, c, d, e, f], R),
+    write('[a, b, c, d, e, f]'), write(R), nl.
+
 extraer_aleatorios(N, Lista, Resultado) :-
     length(Lista, Length),      % Obtiene la longitud de la lista original.
     N =< Length,
