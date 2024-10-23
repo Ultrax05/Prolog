@@ -35,6 +35,9 @@
 %print(run_length_mod(lista))
 %
 % -------- Código en Prolog --------------------
+main :-
+    run_length([1, 1, 2, 3, 3, 4], R).
+    write('[1, 1, 2, 3, 3, 4]'), write(R), nl.
 % El mismo caso vacio de siempre
 run_length([], []).
 
