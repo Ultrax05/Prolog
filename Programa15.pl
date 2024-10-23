@@ -17,6 +17,9 @@
 %print(n_veces(lista, 3))
 %
 % -------- Código en Prolog --------------------
+main :-
+    n_veces(3, [a, b, c], R),
+    write('[a, b, c]'), write(R), nl.
 %En caso de que es vacio imprime lista vacia.
 n_veces(_, [], []).
 
